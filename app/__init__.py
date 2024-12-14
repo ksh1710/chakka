@@ -20,7 +20,7 @@ def create_app(config_class=None):
         except ImportError:
             # Fallback to a default configuration
             class Config:
-                SECRET_KEY = 'default_secret_key'
+                #SECRET_KEY = 'default_secret_key'
                 DEBUG = True
     
     # Apply configuration

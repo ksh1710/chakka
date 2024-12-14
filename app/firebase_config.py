@@ -7,9 +7,9 @@ import os
 def init_firebase():
    
 
-    cred = credentials.Certificate(os.path.join(os.path.dirname(__file__), '..', 'path to json folder'))
+    #cred = credentials.Certificate(os.path.join(os.path.dirname(__file__), '..', 'path to json folder'))
     firebase_admin.initialize_app(cred, {
-        'databaseURL': 'https://pressure-monitoring-b592a-default-rtdb.firebaseio.com/'
+        #'databaseURL': 'https://pressure-monitoring-b592a-default-rtdb.firebaseio.com/'
     })
     return firestore.client(), db.reference()
 
