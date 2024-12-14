@@ -23,3 +23,5 @@ env/
 # Sensitive files
 *credentials*
 *secret*
+
+
