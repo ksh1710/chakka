@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyre Monitoring System</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tyre Monitoring Dashboard</h1>
+        </header>
+        
+        <main>
+            <section class="sensor-readings">
+                <h2>Current Sensor Readings</h2>
+                <div class="reading-grid">
+                    <div class="reading-card">
+                        <h3>Pressure</h3>
+                        <p id="pressure-value">- PSI</p>
+                    </div>
+                    <div class="reading-card">
+                        <h3>Load</h3>
+                        <p id="load-value">- kg</p>
+                    </div>
+                    <div class="reading-card">
+                        <h3>Wheel Rotations</h3>
+                        <p id="rotations-value">-</p>
+                    </div>
+                    <div class="reading-card">
+                        <h3>Parking Brake</h3>
+                        <p id="parking-brake-status">Off</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cycle-info">
+                <h2>Cycle Information</h2>
+                <div class="cycle-details">
+                    <div class="cycle-card">
+                        <h3>Loading Time</h3>
+                        <p id="loading-time">- hours</p>
+                    </div>
+                    <div class="cycle-card">
+                        <h3>Unloading Time</h3>
+                        <p id="unloading-time">- hours</p>
+                    </div>
+                    <div class="cycle-card">
+                        <h3>Loaded Distance</h3>
+                        <p id="loaded-distance">- km</p>
+                    </div>
+                    <div class="cycle-card">
+                        <h3>Unloaded Distance</h3>
+                        <p id="unloaded-distance">- km</p>
+                    </div>
+                    <div class="cycle-card">
+                        <h3>Average Speed</h3>
+                        <p id="avg-speed">- km/h</p>
+                    </div>
+                    <div class="cycle-card">
+                        <h3>TKPH</h3>
+                        <p id="tkph-value">-</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="actions">
+                <button id="complete-cycle" class="btn">Complete Cycle</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="/static/js/realtime.js"></script>
+</body>
+</html>

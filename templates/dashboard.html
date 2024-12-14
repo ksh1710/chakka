@@ -1,0 +1,34 @@
+# File: templates/dashboard.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tyre Monitoring Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="/static/js/realtime.js"></script>
+</head>
+<body>
+    <div id="dashboard">
+        <h1>Tyre Monitoring System</h1>
+        
+        <!-- Real-time Sensor Readings -->
+        <div id="sensor-readings">
+            <p>Pressure: <span id="pressure">-</span> PSI</p>
+            <p>Load: <span id="load">-</span> kg</p>
+            <p>Wheel Rotations: <span id="wheel-rotations">-</span></p>
+            <p>Parking Brake: <span id="parking-brake">Off</span></p>
+        </div>
+        
+        <!-- Cycle Information -->
+        <div id="cycle-info">
+            <p>Loading Time: <span id="loading-time">-</span> hours</p>
+            <p>Unloading Time: <span id="unloading-time">-</span> hours</p>
+            <p>Loaded Distance: <span id="loaded-distance">-</span> km</p>
+            <p>Unloaded Distance: <span id="unloaded-distance">-</span> km</p>
+            <p>Average Speed: <span id="avg-speed">-</span> km/h</p>
+            <p>TKPH: <span id="tkph">-</span></p>
+        </div>
+        
+        <button id="complete-cycle">Reach Destination</button>
+    </div>
+</body>
+</html>
