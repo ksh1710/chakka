@@ -1,4 +1,25 @@
-venv
-.env
+# Ignore all JSON files
 *.json
 !package.json
+
+# Specifically ignore Firebase credentials
+*firebase*.json
+
+# Environment files
+.env
+*.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+
+# Sensitive files
+*credentials*
+*secret*
